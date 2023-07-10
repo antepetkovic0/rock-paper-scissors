@@ -26,12 +26,12 @@
       </li>
       <li class="navigation__item">
         <a href="/map" class="navigation__link" on:click={handleRouteClick}
-          >World map</a
+          >Singleplayer</a
         >
       </li>
       <li class="navigation__item">
         <a href="/compare" class="navigation__link" on:click={handleRouteClick}
-          >Compare</a
+          >Multiplayer</a
         >
       </li>
     </ul>
