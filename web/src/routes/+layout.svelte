@@ -55,7 +55,7 @@
     position: fixed;
     top: 2rem;
     left: 0;
-    background-color: var(--purple-1);
+    background-color: var(--purple);
     z-index: 200;
     text-align: center;
     cursor: pointer;
