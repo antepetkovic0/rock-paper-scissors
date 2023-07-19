@@ -1,6 +1,10 @@
 <script>
-  import { RULES, SYMBOL, SYMBOL_COLOR } from '../lib/data/game';
-  import BaseGameSymbol from '../lib/components/shared/GameSymbol/BaseGameSymbol.svelte';
+  import {
+    GAME_RULES_CONTENT,
+    GAME_SYMBOL,
+    GAME_SYMBOL_COLOR
+  } from '../lib/data/game';
+  import GameSymbol from '../lib/components/shared/GameSymbol/GameSymbol.svelte';
 </script>
 
 <h1>Rock paper scissors</h1>
@@ -12,14 +16,14 @@
 </p>
 <h2>Legend</h2>
 <ul class="symbol__list">
-  {#each Object.values(SYMBOL) as symbol, i}
+  {#each Object.values(GAME_SYMBOL) as symbol, i}
     <li class="symbol__item">
-      <BaseGameSymbol name={symbol} />
+      <GameSymbol name={symbol} />
     </li>
   {/each}
 </ul>
 <ul class="color__list">
-  {#each Object.entries(SYMBOL_COLOR) as [key, value] (key)}
+  {#each Object.entries(GAME_SYMBOL_COLOR) as [key, value] (key)}
     <li class="color__item">
       <span class={`color__icon color__icon--${value}`} />
       {key}
@@ -28,7 +32,7 @@
 </ul>
 <h2>Rules & Trills</h2>
 <ul class="rule__list">
-  {#each RULES as { title, description }, i}
+  {#each GAME_RULES_CONTENT as { title, description }, i}
     <li class="rule__item">
       <div class="rule__number">rule no.{i + 1}</div>
       <div class="rule__content">

@@ -25,13 +25,8 @@
         >
       </li>
       <li class="navigation__item">
-        <a href="/map" class="navigation__link" on:click={handleRouteClick}
-          >Singleplayer</a
-        >
-      </li>
-      <li class="navigation__item">
-        <a href="/compare" class="navigation__link" on:click={handleRouteClick}
-          >Multiplayer</a
+        <a href="/play" class="navigation__link" on:click={handleRouteClick}
+          >Play</a
         >
       </li>
     </ul>
@@ -85,6 +80,7 @@
     &::before {
       top: -0.8rem;
     }
+
     &::after {
       top: 0.8rem;
     }
@@ -140,16 +136,18 @@
   }
 
   .navigation__checkbox:checked ~ .navigation__background {
-    transform: scale(80);
-  }
-
-  .navigation__checkbox:checked ~ .navigation__background {
-    transform: scale(80);
+    transform: scale(150);
   }
 
   .navigation__checkbox:checked ~ .navigation__nav {
     width: 100%;
     opacity: 1;
+    transition: all 0.4s ease-out;
+    transition-delay: 200ms;
+  }
+
+  .navigation__checkbox:not(:checked) ~ .navigation__nav {
+    transition: all 0.3s ease-in;
   }
 
   .navigation__checkbox:checked + .navigation__button .navigation__icon {

@@ -1,4 +1,4 @@
-export const SYMBOL = {
+export const GAME_SYMBOL = {
   ROCK: 'rock',
   PAPER: 'paper',
   SCISSORS: 'scissors',
@@ -6,15 +6,38 @@ export const SYMBOL = {
   SPOCK: 'spock'
 };
 
-export const SYMBOL_COLOR = {
-  [SYMBOL.ROCK]: 'red',
-  [SYMBOL.PAPER]: 'yellow',
-  [SYMBOL.SCISSORS]: 'purple',
-  [SYMBOL.LIZARD]: 'green',
-  [SYMBOL.SPOCK]: 'blue'
+export const GAME_SYMBOL_COLOR = {
+  [GAME_SYMBOL.ROCK]: 'red',
+  [GAME_SYMBOL.PAPER]: 'yellow',
+  [GAME_SYMBOL.SCISSORS]: 'purple',
+  [GAME_SYMBOL.LIZARD]: 'green',
+  [GAME_SYMBOL.SPOCK]: 'blue'
 };
 
-export const RULES = [
+export const GAME_RULES = {
+  [GAME_SYMBOL.ROCK]: {
+    win: [GAME_SYMBOL.SCISSORS, GAME_SYMBOL.LIZARD],
+    lose: [GAME_SYMBOL.PAPER, GAME_SYMBOL.SPOCK]
+  },
+  [GAME_SYMBOL.PAPER]: {
+    win: [GAME_SYMBOL.ROCK, GAME_SYMBOL.SPOCK],
+    lose: [GAME_SYMBOL.SCISSORS, GAME_SYMBOL.LIZARD]
+  },
+  [GAME_SYMBOL.SCISSORS]: {
+    win: [GAME_SYMBOL.PAPER, GAME_SYMBOL.LIZARD],
+    lose: [GAME_SYMBOL.ROCK, GAME_SYMBOL.SPOCK]
+  },
+  [GAME_SYMBOL.LIZARD]: {
+    win: [GAME_SYMBOL.SPOCK, GAME_SYMBOL.PAPER],
+    lose: [GAME_SYMBOL.SCISSORS, GAME_SYMBOL.ROCK]
+  },
+  [GAME_SYMBOL.SPOCK]: {
+    win: [GAME_SYMBOL.SCISSORS, GAME_SYMBOL.ROCK],
+    lose: [GAME_SYMBOL.PAPER, GAME_SYMBOL.LIZARD]
+  }
+};
+
+export const GAME_RULES_CONTENT = [
   {
     title: 'Rock crushes Scissors',
     description:
