@@ -59,31 +59,31 @@
   .navigation__icon {
     margin-top: 2rem;
     position: relative;
+  }
 
-    &,
-    &::before,
-    &::after {
-      display: inline-block;
-      width: 1.6rem;
-      height: 2px;
-      background-color: var(--fg-1);
-    }
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    display: inline-block;
+    width: 1.6rem;
+    height: 2px;
+    background-color: var(--fg-1);
+  }
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      transition: all 0.2s;
-    }
+  .navigation__icon::before,
+  .navigation__icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
 
-    &::before {
-      top: -0.8rem;
-    }
+  .navigation__icon::before {
+    top: -0.8rem;
+  }
 
-    &::after {
-      top: 0.8rem;
-    }
+  .navigation__icon::after {
+    top: 0.8rem;
   }
 
   .navigation__background {
